@@ -15,7 +15,34 @@ Start a new project:
     $ mkdir example ; cd example
     $ touch a.txt
     $ manifest 
+    >> Manifest is empty
+
+    $ git add .
     $ manifest
+    >> Manifest.txt
+    >> a.txt
+    >> Manifest saved successfully
+
+    $ touch b.txt
+    $ git add .
+    $ manifest check
+    >> Difference:
+    >>
+    >> -b.txt
+    >>
+    >> Manifest is invalid
+
+    $ manifest save
+    >> Manifest.txt
+    >> a.txt
+    >> b.txt
+    >> Manifest saved successfully
+
+    $ manifest check
+    >> Manifest.txt
+    >> a.txt
+    >> b.txt
+    >> Manifest is valid
 
 See
 
