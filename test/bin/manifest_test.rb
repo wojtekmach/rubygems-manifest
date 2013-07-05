@@ -89,6 +89,13 @@ describe "bin/manifest" do
     end
   end
 
+  describe "test-files" do
+    it "prints test files" do
+      setup_fixtures
+      command("test-files").must_equal "test/foo_test.rb\n"
+    end
+  end
+
   private
 
   BIN = File.expand_path('../../../bin/manifest', __FILE__)

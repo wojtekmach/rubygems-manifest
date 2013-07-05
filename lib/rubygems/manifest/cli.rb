@@ -60,6 +60,8 @@ module Rubygems
           puts manifest.files
         when 'executables'
           puts manifest.executables
+        when 'test-files'
+          puts manifest.test_files
         else
           puts opts
         end
