@@ -1,4 +1,5 @@
 .gitignore
+.travis.yml
 Gemfile
 LICENSE.txt
 Manifest.txt

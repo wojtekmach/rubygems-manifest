@@ -2,6 +2,8 @@
 
 Create Manifest.txt with the list of files of the current project
 
+[![Build Status](https://secure.travis-ci.org/wojtekmach/rubygems-manifest.png?branch=master)](http://travis-ci.org/wojtekmach/rubygems-manifest)
+
 ## Installation
 
     $ gem install rubygems-manifest
