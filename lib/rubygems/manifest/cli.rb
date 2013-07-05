@@ -28,7 +28,8 @@ module Rubygems
 
         manifest = Rubygems::Manifest.new
 
-        if ARGV[0] == nil || ARGV[0] == 'save'
+        case ARGV[0]
+        when nil, 'save'
           manifest.save
 
           if manifest.files.none?
@@ -37,7 +38,7 @@ module Rubygems
             puts manifest.files
             $stderr.puts green("Manifest is saved successfully")
           end
-        elsif ARGV[0] == 'check'
+        when 'check'
           begin
             manifest.check
 
