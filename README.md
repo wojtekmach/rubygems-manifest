@@ -17,11 +17,15 @@ Start a new project:
     $ manifest 
     >> Manifest is empty
 
+Save manifest:
+
     $ git add .
     $ manifest
     >> Manifest.txt
     >> a.txt
     >> Manifest saved successfully
+
+Check manifest:
 
     $ touch b.txt
     $ git add .
