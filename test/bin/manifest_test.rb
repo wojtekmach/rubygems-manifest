@@ -9,6 +9,12 @@ describe "bin/manifest" do
     end
   end
 
+  describe "--help" do
+    it "prints usage instructions" do
+      command("--help").must_include "Usage: manifest [commands] [options]"
+    end
+  end
+
   def self.it(*args, &block)
     super(*args, &proc { in_tmp_dir(&block) })
   end
