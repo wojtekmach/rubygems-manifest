@@ -13,3 +13,4 @@ lib/rubygems/manifest/version.rb
 rubygems-manifest.gemspec
 test/bin/manifest_test.rb
 test/rubygems/manifest_test.rb
+test/test_helper.rb

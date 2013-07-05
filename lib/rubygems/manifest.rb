@@ -18,6 +18,10 @@ module Rubygems
       files.grep(%r{^(test|spec|features)/})
     end
 
+    def tests
+      files.grep(%r{^(test|spec|features)(.*)(_test.rb|_spec.rb|\.feature)$})
+    end
+
     def read
       File.read(@filename).split("\n")
     end

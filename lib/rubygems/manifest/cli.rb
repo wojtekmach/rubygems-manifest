@@ -18,6 +18,7 @@ module Rubygems
         opts.banner << ("    files".ljust(37)) + "Print files\n"
         opts.banner << ("    executables".ljust(37)) + "Print executables\n"
         opts.banner << ("    test-files".ljust(37)) + "Print all test files\n"
+        opts.banner << ("    tests".ljust(37)) + "Print tests\n"
 
         opts.banner << "\n"
         opts.banner << "Options:\n"
@@ -62,6 +63,8 @@ module Rubygems
           puts manifest.executables
         when 'test-files'
           puts manifest.test_files
+        when 'tests'
+          puts manifest.tests
         else
           puts opts
         end

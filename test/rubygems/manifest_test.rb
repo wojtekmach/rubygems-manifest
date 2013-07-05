@@ -17,6 +17,12 @@ describe Rubygems::Manifest do
   end
 
   it "returns all test files" do
+    manifest.test_files.must_include 'test/test_helper.rb'
     manifest.test_files.must_include 'test/rubygems/manifest_test.rb'
+  end
+
+  it "returns tests" do
+    manifest.tests.wont_include 'test/test_helper.rb'
+    manifest.tests.must_include 'test/rubygems/manifest_test.rb'
   end
 end

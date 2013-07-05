@@ -68,7 +68,7 @@ describe "bin/manifest" do
 
   def setup_fixtures
     `mkdir bin lib test`
-    `touch bin/foo lib/foo.rb test/foo_test.rb`
+    `touch bin/foo lib/foo.rb test/foo_test.rb test/test_helper.rb`
     `git add .`
   end
 
@@ -78,7 +78,8 @@ describe "bin/manifest" do
       command("files").must_equal "Manifest.txt\n" \
                                   "bin/foo\n" \
                                   "lib/foo.rb\n" \
-                                  "test/foo_test.rb\n"
+                                  "test/foo_test.rb\n" \
+                                  "test/test_helper.rb\n"
     end
   end
 
@@ -92,7 +93,15 @@ describe "bin/manifest" do
   describe "test-files" do
     it "prints test files" do
       setup_fixtures
-      command("test-files").must_equal "test/foo_test.rb\n"
+      command("test-files").must_equal "test/foo_test.rb\n" \
+                                       "test/test_helper.rb\n"
+    end
+  end
+
+  describe "tests" do
+    it "prints tests" do
+      setup_fixtures
+      command("tests").must_equal "test/foo_test.rb\n"
     end
   end
 
