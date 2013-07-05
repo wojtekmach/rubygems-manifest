@@ -15,6 +15,9 @@ module Rubygems
         opts.banner << "Commands:\n"
         opts.banner << ("    save".ljust(37))  + "Save to Manifest.txt [default]\n"
         opts.banner << ("    check".ljust(37)) + "Check Manifest.txt\n"
+        opts.banner << ("    files".ljust(37)) + "Print files\n"
+        opts.banner << ("    executables".ljust(37)) + "Print executables\n"
+        opts.banner << ("    test-files".ljust(37)) + "Print test files\n"
 
         opts.banner << "\n"
         opts.banner << "Options:\n"
@@ -53,6 +56,8 @@ module Rubygems
             $stderr.puts red("Manifest is invalid")
             exit 1
           end
+        when 'files'
+          puts manifest.files
         else
           puts opts
         end

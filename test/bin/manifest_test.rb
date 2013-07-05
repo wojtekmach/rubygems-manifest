@@ -66,6 +66,22 @@ describe "bin/manifest" do
     end
   end
 
+  def setup_fixtures
+    `mkdir bin lib test`
+    `touch bin/foo lib/foo.rb test/foo_test.rb`
+    `git add .`
+  end
+
+  describe "files" do
+    it "prints files" do
+      setup_fixtures
+      command("files").must_equal "Manifest.txt\n" \
+                                  "bin/foo\n" \
+                                  "lib/foo.rb\n" \
+                                  "test/foo_test.rb\n"
+    end
+  end
+
   private
 
   BIN = File.expand_path('../../../bin/manifest', __FILE__)
