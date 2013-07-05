@@ -20,7 +20,8 @@ module Rubygems
         opts.banner << "Options:\n"
 
         opts.on("-v", "--version", "Print version") do
-          puts "rubygems-manifest #{Rubygems::Manifest::VERSION}"
+          puts Rubygems::Manifest::VERSION
+          exit(0)
         end
 
         opts.parse!
