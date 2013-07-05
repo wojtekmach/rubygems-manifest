@@ -29,8 +29,13 @@ module Rubygems
 
         if ARGV[0] == nil || ARGV[0] == 'save'
           manifest.save
-          puts manifest.files
-          $stderr.puts green("Manifest completed successfully")
+
+          if manifest.files.none?
+            puts yellow("Manifest is empty")
+          else
+            puts manifest.files
+            $stderr.puts green("Manifest is saved successfully")
+          end
         elsif ARGV[0] == 'check'
           begin
             manifest.check
