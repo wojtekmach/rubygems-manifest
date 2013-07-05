@@ -58,6 +58,8 @@ module Rubygems
           end
         when 'files'
           puts manifest.files
+        when 'executables'
+          puts manifest.executables
         else
           puts opts
         end

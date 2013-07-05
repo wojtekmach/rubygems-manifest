@@ -82,6 +82,13 @@ describe "bin/manifest" do
     end
   end
 
+  describe "executables" do
+    it "prints executable files" do
+      setup_fixtures
+      command("executables").must_equal "foo\n"
+    end
+  end
+
   private
 
   BIN = File.expand_path('../../../bin/manifest', __FILE__)
