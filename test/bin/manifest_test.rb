@@ -50,15 +50,19 @@ describe "bin/manifest" do
   end
 
   describe "save" do
-    it "saves Manifest.txt" do
+    def save
       `touch a.txt`
       `git add .`
       command('save')
+    end
 
+    it "saves Manifest.txt" do
+      save
       File.read('Manifest.txt').must_equal "Manifest.txt\na.txt\n"
     end
 
     it "prints the manifest" do
+      save.must_equal "Manifest.txt\na.txt\n"
     end
   end
 
