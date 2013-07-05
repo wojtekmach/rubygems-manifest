@@ -35,7 +35,7 @@ module Rubygems
     end
 
     def diff
-      [files - read, read - files]
+      [read - files, files - read]
     end
 
     def diff_str

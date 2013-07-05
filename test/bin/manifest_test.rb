@@ -31,7 +31,7 @@ describe "bin/manifest" do
 
       `touch b.txt`
       `git add .`
-      command('check').must_equal "Difference:\n\n+b.txt\n\n"
+      command('check').must_equal "Difference:\n\n-b.txt\n\n"
       $?.success?.must_equal false
     end
   end
