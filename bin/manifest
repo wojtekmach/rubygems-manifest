@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+if $0 == __FILE__
+  $:.unshift 'lib/'
+end
+
+require 'rubygems/manifest/cli'
+Rubygems::Manifest::CLI.start

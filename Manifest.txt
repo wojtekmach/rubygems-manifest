@@ -1,0 +1,14 @@
+.gitignore
+Gemfile
+LICENSE.txt
+Manifest.txt
+README.md
+Rakefile
+VERSION
+bin/manifest
+lib/rubygems/manifest.rb
+lib/rubygems/manifest/cli.rb
+lib/rubygems/manifest/version.rb
+rubygems-manifest.gemspec
+test/bin/manifest_test.rb
+test/rubygems/manifest_test.rb
