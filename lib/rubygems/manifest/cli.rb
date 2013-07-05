@@ -17,7 +17,7 @@ module Rubygems
         opts.banner << ("    check".ljust(37)) + "Check Manifest.txt\n"
         opts.banner << ("    files".ljust(37)) + "Print files\n"
         opts.banner << ("    executables".ljust(37)) + "Print executables\n"
-        opts.banner << ("    test-files".ljust(37)) + "Print test files\n"
+        opts.banner << ("    test-files".ljust(37)) + "Print all test files\n"
 
         opts.banner << "\n"
         opts.banner << "Options:\n"

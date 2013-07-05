@@ -15,4 +15,8 @@ describe Rubygems::Manifest do
   it "returns executables" do
     manifest.executables.must_equal ['manifest']
   end
+
+  it "returns all test files" do
+    manifest.test_files.must_include 'test/rubygems/manifest_test.rb'
+  end
 end
