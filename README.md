@@ -52,6 +52,12 @@ See
 
     $ manifest --help
 
+## Example scripting
+
+### Run each test separately
+
+    $ for i in $(manifest tests); do ruby -Ilib -Itest $i ; done
+
 ## Contributing
 
 1. Fork it
