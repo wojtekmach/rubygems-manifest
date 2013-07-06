@@ -14,13 +14,13 @@ Start a new project:
 
     $ mkdir example ; cd example
     $ touch a.txt
-    $ manifest 
+    $ manifest check
     >> Manifest is empty
 
 Save manifest:
 
     $ git add .
-    $ manifest
+    $ manifest check
     >> Manifest.txt
     >> a.txt
     >> Manifest saved successfully

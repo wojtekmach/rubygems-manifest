@@ -33,7 +33,7 @@ module Rubygems
         manifest = Rubygems::Manifest.new
 
         case ARGV[0]
-        when nil, 'save'
+        when 'save'
           manifest.save
 
           if manifest.files.none?

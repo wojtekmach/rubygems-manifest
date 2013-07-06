@@ -12,6 +12,7 @@ describe "bin/manifest" do
   describe "--help" do
     it "prints usage instructions" do
       command("--help").must_include "Usage: manifest [commands] [options]"
+      command("").must_include "Usage: manifest [commands] [options]"
     end
   end
 
