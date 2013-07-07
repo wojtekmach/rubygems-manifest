@@ -30,8 +30,6 @@ module Rubygems
 
         opts.parse!
 
-        manifest = Rubygems::Manifest.new
-
         case ARGV[0]
         when 'save'
           manifest.save
@@ -68,6 +66,10 @@ module Rubygems
         else
           puts opts
         end
+      end
+
+      def manifest
+        @manifest ||= Rubygems::Manifest.new
       end
 
       def green(str)
