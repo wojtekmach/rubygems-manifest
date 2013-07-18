@@ -2,7 +2,9 @@
 
 [![Build Status](https://secure.travis-ci.org/wojtekmach/rubygems-manifest.png?branch=master)](http://travis-ci.org/wojtekmach/rubygems-manifest)
 
-Create Manifest.txt with the list of files of the current project
+Creates Manifest.txt with the list of files of the current project. The Manifest is created using `git ls-files` so no files from `.gitignore` will be there.
+
+This awesome idea of having a `Manifest.txt` file was stolen from https://github.com/seattlerb/hoe.
 
 ## Installation
 
